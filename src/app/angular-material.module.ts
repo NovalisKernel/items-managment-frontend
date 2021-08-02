@@ -66,6 +66,7 @@ const materialModules = [
   MatRadioModule,
   MatDatepickerModule,
   MatTooltipModule,
+  MatIconModule,
 ];
 
 @NgModule({
