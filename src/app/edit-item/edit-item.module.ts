@@ -4,8 +4,8 @@ import { CommonModule } from '@angular/common';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { AngularMaterialModule } from '../angular-material.module';
-import { HomeComponent } from './home.component';
-import { DeleteDialog } from './home.component';
+
+import { EditItemComponent } from './edit-item.component';
 
 @NgModule({
   imports: [
@@ -14,6 +14,6 @@ import { DeleteDialog } from './home.component';
     AngularMaterialModule,
     FlexLayoutModule,
   ],
-  declarations: [HomeComponent, DeleteDialog],
+  declarations: [EditItemComponent],
 })
-export class HomeModule {}
+export class EditItemModule {}

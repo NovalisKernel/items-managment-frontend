@@ -4,8 +4,9 @@ import { CommonModule } from '@angular/common';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { AngularMaterialModule } from '../angular-material.module';
-import { HomeComponent } from './home.component';
-import { DeleteDialog } from './home.component';
+import { MainLayoutComponent } from './main-layout.component';
+import { LogoutDialog } from './main-layout.component';
+import { MainLayoutRoutingModule } from './main-layout-routing.module';
 
 @NgModule({
   imports: [
@@ -13,7 +14,8 @@ import { DeleteDialog } from './home.component';
     ReactiveFormsModule,
     AngularMaterialModule,
     FlexLayoutModule,
+    MainLayoutRoutingModule,
   ],
-  declarations: [HomeComponent, DeleteDialog],
+  declarations: [MainLayoutComponent, LogoutDialog],
 })
-export class HomeModule {}
+export class MainLayoutModule {}

@@ -1,0 +1,21 @@
+<mat-toolbar class="toolbar">
+  <span>Item management</span>
+  <span class="example-spacer"></span>
+  <span>{{ user.username }}</span>
+  <button
+    mat-icon-button
+    class="example-icon favorite-icon"
+    aria-label="Example icon-button with heart icon"
+    [matMenuTriggerFor]="menu"
+  >
+    <mat-icon>account_circle</mat-icon>
+  </button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item (click)="openDialog()">Logout</button>
+  </mat-menu>
+</mat-toolbar>
+<div>
+  <div class="content" fxLayout="column" fxFlex>
+    <router-outlet></router-outlet>
+  </div>
+</div>

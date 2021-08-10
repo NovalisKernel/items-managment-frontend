@@ -31,8 +31,6 @@ export class AccountService {
       })
       .pipe(
         map((user) => {
-          // store user details and jwt token in local storage to keep user logged in between page refreshes
-          console.log('USER', user);
           localStorage.setItem('user', JSON.stringify(user));
           this.userSubject.next(user);
           return user;
@@ -41,7 +39,6 @@ export class AccountService {
   }
 
   logout() {
-    // remove user from local storage and set current user to null
     localStorage.removeItem('user');
     this.userSubject.next((null as unknown) as User);
     this.router.navigate(['/account/login']);
